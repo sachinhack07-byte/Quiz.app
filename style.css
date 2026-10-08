@@ -1,0 +1,455 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   BODY
+===================================================== */
+
+body {
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #667eea,
+        #764ba2
+    );
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+
+/* =====================================================
+   MAIN QUIZ CONTAINER
+===================================================== */
+
+.quiz-container {
+    background: white;
+
+    width: 90%;
+    max-width: 500px;
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =====================================================
+   HEADINGS
+===================================================== */
+
+.quiz-container h1 {
+    font-size: 36px;
+
+    margin-bottom: 10px;
+
+    color: #333;
+}
+
+.quiz-container h2 {
+    color: #333;
+}
+
+.quiz-container h3 {
+    color: #333;
+
+    margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   PARAGRAPHS
+===================================================== */
+
+.quiz-container p {
+    color: #666;
+
+    margin-bottom: 20px;
+
+    font-size: 18px;
+}
+
+
+/* =====================================================
+   START SCREEN
+===================================================== */
+
+#start-screen p {
+    margin-bottom: 15px;
+}
+
+
+/* =====================================================
+   DIFFICULTY BUTTONS
+===================================================== */
+
+.difficulty-buttons {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin-top: 20px;
+}
+
+
+.difficulty-buttons button {
+    background: #667eea;
+
+    color: white;
+
+    border: none;
+
+    padding: 14px 30px;
+
+    font-size: 18px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.1s ease;
+}
+
+
+.difficulty-buttons button:hover {
+    background: #5568d8;
+
+    transform: translateY(-2px);
+}
+
+
+.difficulty-buttons button:active {
+    transform: translateY(0);
+}
+
+
+/* =====================================================
+   QUIZ HEADER
+===================================================== */
+
+.quiz-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 10px;
+}
+
+
+.quiz-header p {
+    margin-bottom: 0;
+
+    font-size: 16px;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   TIMER
+===================================================== */
+
+#timer {
+    color: #d9534f;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   PROGRESS BAR
+===================================================== */
+
+.progress-container {
+    width: 100%;
+
+    height: 10px;
+
+    background: #ddd;
+
+    border-radius: 10px;
+
+    margin: 15px 0 25px;
+
+    overflow: hidden;
+}
+
+
+#progress-bar {
+    width: 0%;
+
+    height: 100%;
+
+    background: #667eea;
+
+    border-radius: 10px;
+
+    transition: width 0.3s ease;
+}
+
+
+/* =====================================================
+   QUESTION
+===================================================== */
+
+#quiz-screen h2 {
+    color: #333;
+
+    margin-bottom: 25px;
+
+    line-height: 1.4;
+}
+
+
+/* =====================================================
+   OPTIONS
+===================================================== */
+
+#options {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+}
+
+
+.option-btn {
+    width: 100%;
+
+    background: #f1f1f1;
+
+    color: #333;
+
+    border: 2px solid #ddd;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.1s ease;
+}
+
+
+.option-btn:hover:not(:disabled) {
+    background: #e5e5e5;
+
+    border-color: #667eea;
+
+    transform: translateY(-1px);
+}
+
+
+.option-btn:disabled {
+    cursor: not-allowed;
+
+    opacity: 0.9;
+}
+
+
+/* =====================================================
+   NEXT + RESTART BUTTON
+===================================================== */
+
+#next-btn,
+#restart-btn {
+    background: #667eea;
+
+    color: white;
+
+    border: none;
+
+    padding: 14px 30px;
+
+    font-size: 18px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.1s ease;
+}
+
+
+#next-btn:hover,
+#restart-btn:hover {
+    background: #5568d8;
+
+    transform: translateY(-2px);
+}
+
+
+#next-btn:active,
+#restart-btn:active {
+    transform: translateY(0);
+}
+
+
+/* =====================================================
+   RESULT SCREEN
+===================================================== */
+
+#result-screen h1 {
+    margin-bottom: 20px;
+}
+
+
+#result-screen h2 {
+    margin-bottom: 15px;
+}
+
+
+#result-screen p {
+    margin-bottom: 15px;
+}
+
+
+#result-message {
+    margin: 20px 0;
+}
+
+
+/* =====================================================
+   HIDE
+===================================================== */
+
+.hide {
+    display: none !important;
+}
+
+
+/* =====================================================
+   CONFETTI
+===================================================== */
+
+#confetti-container {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 999;
+}
+
+
+/* =====================================================
+   CONFETTI ANIMATION
+===================================================== */
+
+@keyframes fall {
+
+    from {
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+
+    to {
+        transform:
+            translateY(110vh)
+            rotate(360deg);
+    }
+}
+
+
+/* =====================================================
+   MOBILE RESPONSIVE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+
+    .quiz-container {
+        width: 100%;
+
+        padding: 25px 20px;
+
+        border-radius: 12px;
+    }
+
+
+    .quiz-container h1 {
+        font-size: 30px;
+    }
+
+
+    #quiz-screen h2 {
+        font-size: 21px;
+    }
+
+
+    .quiz-header {
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+
+    .quiz-header p {
+        font-size: 15px;
+    }
+
+
+    .option-btn {
+        font-size: 15px;
+
+        padding: 11px;
+    }
+
+
+    #next-btn,
+    #restart-btn,
+    .difficulty-buttons button {
+        width: 100%;
+    }
+
+}

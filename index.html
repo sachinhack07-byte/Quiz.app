@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="quiz-container">
+
+        <!-- ================= START SCREEN ================= -->
+        <div id="start-screen">
+
+            <h1>Quiz App</h1>
+
+            <p>Test your knowledge!</p>
+            <p>Developed by Sachin Singh</p>
+
+            <h3>Select Difficulty</h3>
+
+            <div class="difficulty-buttons">
+                <button id="easy-btn" type="button">Easy</button>
+                <button id="medium-btn" type="button">Medium</button>
+                <button id="hard-btn" type="button">Hard</button>
+            </div>
+
+        </div>
+
+
+        <!-- ================= QUIZ SCREEN ================= -->
+        <div id="quiz-screen" class="hide">
+
+            <div class="quiz-header">
+
+                <p id="question-number">
+                    Question 1 of 10
+                </p>
+
+                <p id="timer">
+                    Time: 15s
+                </p>
+
+            </div>
+
+
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <div id="progress-bar"></div>
+            </div>
+
+
+            <!-- Question -->
+            <h2 id="question">
+                Question goes here
+            </h2>
+
+
+            <!-- Options -->
+            <div id="options"></div>
+
+
+            <!-- Next Button -->
+            <button id="next-btn" type="button">
+                Next Question
+            </button>
+
+        </div>
+
+
+        <!-- ================= RESULT SCREEN ================= -->
+        <div id="result-screen" class="hide">
+
+            <h1>Quiz Completed!</h1>
+
+            <p>Your Score:</p>
+
+            <h2 id="score">
+                0 / 10
+            </h2>
+
+            <p id="percentage">
+                Percentage: 0%
+            </p>
+
+            <p id="high-score">
+                High Score: 0 / 10
+            </p>
+
+            <h2 id="result-message"></h2>
+
+            <div id="confetti-container"></div>
+
+            <button id="restart-btn" type="button">
+                Restart Quiz
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= SOUND ================= -->
+    <audio id="click-sound" src="click.mp3" preload="auto"></audio>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
